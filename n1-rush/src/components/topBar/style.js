@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  
   height: 35px;
   margin: 44px auto 0px auto;
-  background-color: black;
+  background-color: transparent;
   max-width: 1189px;
+  
+  display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 
   h6 {
     color: #ffffff;

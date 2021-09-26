@@ -1,12 +1,13 @@
+import Carousel from "../../components/carousel";
 import TopBar from "../../components/topBar";
 
 const Home = () => {
-    return (       
-       <div>
-           <TopBar/>
-       </div>
-    )
-
-}
+  return (
+    <>
+      <Carousel />
+      <TopBar />
+    </>
+  );
+};
 
 export default Home;
