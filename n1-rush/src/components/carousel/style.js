@@ -1,31 +1,64 @@
 import styled from "styled-components";
 
-export const Slider = styled.div`
-  max-width: 1920px;
-  max-height: 840px;
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -10;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none; 
+  }
+`;
+
+export const Slider = styled.div`
+  top: 0;
+  left: 0;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
   position: relative;
+  display: flex;
+
 `;
 
 export const Details = styled.div`
   max-width: 420px;
-  color:#ffffff;
+  color: #ffffff;
   text-align: right;
   margin-left: 1080px;
   margin-top: 209px;
-  
+
   position: absolute;
   width: 100%;
-  top:0px;
-  
-  h3{
+  top: 0px;
+
+  h3 {
     font-weight: 900;
     font-size: 46px;
     text-transform: uppercase;
   }
-  p{
+  p {
     font-weight: 400;
     font-size: 16px;
   }
@@ -34,15 +67,14 @@ export const Details = styled.div`
 export const Price = styled.div`
   display: flex;
   justify-content: flex-end;
-  color: #3EC6E0;
+  color: #3ec6e0;
 
-  h1{
+  h1 {
     font-weight: 900;
     font-size: 70px;
     padding: 0;
-
   }
-  small{
+  small {
     margin-top: 12px;
     font-size: 28px;
     font-weight: 900;

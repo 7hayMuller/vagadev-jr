@@ -10,6 +10,7 @@ export const Container = styled.div`
   top: 212px;
   background-color: #084154;
   border-radius: 0px 0px 0px 10px;
+  z-index: 100;
 `;
 
 export const TopSide = styled.div`
@@ -58,7 +59,7 @@ export const Controls = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    
+
     img:hover{
         cursor: pointer;
     }
