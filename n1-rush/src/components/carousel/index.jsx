@@ -28,21 +28,10 @@ const Carousel = () => {
   return (
    
     <>
-      {/* {<Slider>
-        <img src={images[page - 1].imagePath} alt={images[page - 1].title} />
-        <Details>
-          <h3>{images[page - 1].title}</h3>
-          <Price>
-            <h1> {images[page - 1].price.split(",")[0]} </h1>
-            <small> ,{images[page - 1].price.split(",")[1]} </small>
-          </Price>
-          <p> {images[page - 1].description} </p>
-        </Details>
-      </Slider>} */}
       <Container>
       {images.map((image, index) => {
         return (
-          <Slider id={`image-${index+1}`}>
+          <Slider key={index} id={`image-${index+1}`}>
             <img src={image.imagePath} alt={image.title} />
             <Details>
               <h3>{image.title}</h3>
