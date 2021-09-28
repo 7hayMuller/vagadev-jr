@@ -4,7 +4,7 @@ import DonkeyKongBanner from "../../assets/img/product-donkey-kong.png";
 import CyberpunkBanner from "../../assets/img/product-cyberpunk2077.png";
 import Product from "./product";
 
-const ProductList = () => {
+const ProductList = ({setBagTotal, bagTotal}) => {
   const products = [
     {
       imagePath: OutridersBanner,
@@ -26,9 +26,9 @@ const ProductList = () => {
   return (
     <Container>
       <li>
-        {products.map((product) => (
-          <ul>
-              <Product product={product}/>
+        {products.map((product, index) => (
+          <ul key={index}> 
+              <Product product={product} setBagTotal={setBagTotal} bagTotal={bagTotal} />
           </ul>
         ))}
       </li>

@@ -1,6 +1,5 @@
 import React from "react";
 import MortalKombatBanner from "../../assets/img/principal_banner_desktop.jpg";
-import RedDeadRedemption from "../../assets/img/principal_banner_desktop_02.jpg";
 import Control from "./control";
 import { Slider, Details, Price, Container } from "./style";
 
@@ -16,11 +15,18 @@ const Carousel = () => {
         "Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.",
     },
     {
-      imagePath: RedDeadRedemption,
-      title: "Red Dead Redemption II",
+      imagePath: MortalKombatBanner,
+      title: "Mortal Kombat",
       price: "R$ 299,99",
       description:
-        "Estados Unidos, 1899. O fim da era do velho oeste começou, e as autoridades estão caçando as últimas gangues de fora da lei que restam.",
+        "Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.",
+    },
+    {
+      imagePath: MortalKombatBanner,
+      title: "Mortal Kombat",
+      price: "R$ 299,99",
+      description:
+        "Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.",
     }
 
   ];

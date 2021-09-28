@@ -8,7 +8,7 @@ import shopBag from "../../assets/svgs/shopping-bag-solid.svg";
 import paperPlane from "../../assets/svgs/paper-plane.svg";
 import Badge from "../badge";
 
-const TopBar = () => {
+const TopBar = ({bagTotal}) => {
   return (
     <Container>
       <LeftSide>
@@ -24,7 +24,7 @@ const TopBar = () => {
         <img src={line} alt="line" />
         <div>
           <img src={shopBag} alt="shop" />
-          <Badge quantity={2} />
+          <Badge quantity={bagTotal} />
         </div>
       </RightSide>
     </Container>
