@@ -11,5 +11,7 @@ export const Ellipse = styled.div`
  font-size: 14px;
  align-items: center;
  justify-content: center;
- 
+ @media (max-width: 740px){
+     margin-left: -23px;
+ }
 `

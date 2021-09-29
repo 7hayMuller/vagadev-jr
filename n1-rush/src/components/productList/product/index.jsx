@@ -3,11 +3,12 @@ import { Container, Image, Info, Line } from "./style";
 import Button from "../../button";
 import Modal from "../../modal";
 
-const Product = ({ product, setBagTotal,bagTotal }) => {
-  const [open, setOpen] = useState(false);
+const Product = ({ pageProduct, product, setBagTotal,bagTotal }) => {
+  const [open, setOpen] = useState(false);   
+  
   return (
     <>
-      <Container>
+      <Container id={`product-${pageProduct}`}>
         <Image>
           <img src={product.imagePath} alt={product.title} />
         </Image>
@@ -15,7 +16,7 @@ const Product = ({ product, setBagTotal,bagTotal }) => {
         <Info>
           <small> {product.title} </small>
           <h6> {`R$ ${product.price}`} </h6>
-          <Button setOpen={setOpen} setBagTotal={setBagTotal} bagTotal={bagTotal}/>
+          <Button  idProduct={product.id} pageProduct={pageProduct} setOpen={setOpen} setBagTotal={setBagTotal} bagTotal={bagTotal}/>
         </Info>
       </Container>
       <Modal open={open} setOpen={setOpen} />

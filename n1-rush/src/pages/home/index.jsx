@@ -3,9 +3,10 @@ import MediumBanners from "../../components/mediumBanners";
 import TopBar from "../../components/topBar";
 import HighlightIcon from "../../assets/svgs/highlight-icon.svg";
 import { Title, Products, App } from "./style";
-import ProductList from "../../components/productList";
 import Footer from "../../components/footer";
 import React from "react";
+import ProductListDesktop from "../../components/productList";
+import ProductListMobile from "../../components/productListMobile";
 
 
 const Home = () => {
@@ -23,7 +24,8 @@ const Home = () => {
           <img src={HighlightIcon} alt="icon" />
           <h2> Produtos em destaque </h2>
         </Title>
-        <ProductList setBagTotal={setBagTotal} bagTotal={bagTotal}/>
+        <ProductListDesktop setBagTotal={setBagTotal} bagTotal={bagTotal}/>
+        <ProductListMobile setBagTotal={setBagTotal} bagTotal={bagTotal}/>
       </Products>     
       <Footer/> 
     </App>

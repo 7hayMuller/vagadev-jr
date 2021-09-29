@@ -8,4 +8,10 @@ export const Container = styled.div`
   height: 368px;
   position: absolute;
   top: 691px;
+  @media (max-width: 660px){
+    top: 0;
+    position: relative;
+    flex-direction: column;
+    height: 456px;
+  }
 `;

@@ -5,7 +5,6 @@ export const PurchaseButton = styled.button`
   width: 240px !important;
   height: 52px !important;
   all: unset;
-  //background-color: ${props => props.state.color};
   background-color: #3ec6e0;
   border-radius: 5px;
   display: flex;
@@ -20,7 +19,6 @@ export const PurchaseButton = styled.button`
     font-weight: 900;
     text-transform: uppercase;
     font-size: 18px;
-    //margin-right: ${props => props.state.labelMargin};
     margin-right: 0px !important;
 
     
@@ -32,8 +30,7 @@ export const PurchaseButton = styled.button`
     bottom: 0;
     width: 68px;
     height: 79px;
-    //display: ${props => props.state.showMario}; 
-    display  : none;
+    display: none;
     display: none;   
   }
 
@@ -51,5 +48,24 @@ export const PurchaseButton = styled.button`
     img{
       display: block;
     }
+  }
+
+  @media (max-width: 1200px){
+    min-height: 35px !important;
+    min-width: 162px !important;
+    
+    p{
+    font-size: 14px !important;
+  }
+  :disabled{
+    p{
+      margin-right: 40px !important;
+    }
+  }
+  img{
+    margin-left: 110px !important;
+    width: 60px;
+    height: 60px;
+  }
   }
 `;

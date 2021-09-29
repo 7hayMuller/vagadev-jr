@@ -11,6 +11,7 @@ const PopUpMenu = ({ showMenu }) => {
           <li>Smash Bros</li>
           <li>Killer Instict</li>
           <li>DBZ Kakarot</li>
+          <div></div>
         </ul>
         <ul>
           <li>Ação / Aventura</li>
@@ -18,6 +19,7 @@ const PopUpMenu = ({ showMenu }) => {
           <li>Tomb Raider</li>
           <li>HALO</li>
           <li>Call of Duty</li>
+          <div></div>
         </ul>
         <ul>
           <li>Corrida</li>

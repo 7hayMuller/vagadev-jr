@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  z-index: -100 !important;
   min-height: 267px;
   min-width: 556px;
   z-index: 10;
@@ -10,13 +11,22 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   top: 37px;
-  display: ${ props => props.show };
+  display: ${props => props.show};
   transition: all 0.5s;
 
   @media (max-width: 1240px){
     left: -12px;
   }
 
+  @media (max-width: 660px){
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh !important;
+    min-height: 100% !important;
+    background-color: #084154;
+  }
 `;
 
 export const Arrow = styled.div`
@@ -27,7 +37,9 @@ height: 18px;
 transform: rotate(-45deg) !important;
 top: 9px;
 left: 30px;
-
+@media (max-width: 660px){
+    display: none;
+  }
 ;
 
 `
@@ -70,5 +82,33 @@ export const Content = styled.div`
         border-radius: 5px;
       }
 
+  }
+
+  @media (max-width: 660px){
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 102px 0px 0px 29px;
+    flex-direction: column;
+    ul{
+      li:first-child{
+        font-weight: 900;
+        font-size: 24px;
+        color: #ffffff;
+      }
+      li{
+        width: 317px;
+        height: 36px;
+        font-weight: 18px;
+      }
+      div{
+        height: 1px;
+        width: 100%;
+        background-color: #062C38;
+        max-width: 320px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+    }
   }
 `;

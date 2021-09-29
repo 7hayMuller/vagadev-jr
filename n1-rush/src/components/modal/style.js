@@ -10,10 +10,10 @@ export const Container = styled.div`
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
   `
 
-  export const Box = styled.div`
+export const Box = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@ export const Container = styled.div`
     height: 500px;
     width: 400.21px;
     border-radius: 5px;
+    
   
     img:first-child {
     position: absolute;
@@ -33,6 +34,7 @@ export const Container = styled.div`
     margin-bottom: 436px;
     cursor: pointer;
     transform: transition all 0.5s;
+    
   }
   img:first-child:hover {
     opacity: .7;
@@ -45,6 +47,12 @@ export const Container = styled.div`
     left: 88.05px;
     top: 235px;
   } 
+
+  @media (max-width: 660px){
+    margin-left: 30px !important;
+    margin-right: 26px !important;
+
+}
 ;
 
 `

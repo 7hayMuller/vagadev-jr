@@ -1,22 +1,22 @@
 import { Container } from "./style";
-import OutridersBanner from "../../assets/img/product-outriders.png";
-import DonkeyKongBanner from "../../assets/img/product-donkey-kong.png";
-import CyberpunkBanner from "../../assets/img/product-cyberpunk2077.png";
+import OutridersBanner from "../../assets/svgs/outriders.svg";
+import DonkeyKongBanner from "../../assets/svgs/donkey.svg";
+import CyberpunkBanner from "../../assets/svgs/cyberpunk.svg";
 import Product from "./product";
 
-const ProductList = ({setBagTotal, bagTotal}) => {
+const ProductListDesktop = ({setBagTotal, bagTotal}) => {
   const products = [
-    {
+    {      
       imagePath: OutridersBanner,
       title: "Outriders",
       price: "200,00",
     },
-    {
+    {      
       imagePath: CyberpunkBanner,
       title: "Cyberpunk 2077",
       price: "200,00",
     },
-    {
+    {      
       imagePath: DonkeyKongBanner,
       title: "Donkey Kong Country Tropical Freeze",
       price: "200,00",
@@ -25,15 +25,15 @@ const ProductList = ({setBagTotal, bagTotal}) => {
 
   return (
     <Container>
-      <li>
+      <ul>
         {products.map((product, index) => (
-          <ul key={index}> 
-              <Product product={product} setBagTotal={setBagTotal} bagTotal={bagTotal} />
-          </ul>
+          <li key={index}> 
+              <Product  product={product} setBagTotal={setBagTotal} bagTotal={bagTotal} />
+          </li>
         ))}
-      </li>
+      </ul>
     </Container>
   );
 };
 
-export default ProductList;
+export default ProductListDesktop;

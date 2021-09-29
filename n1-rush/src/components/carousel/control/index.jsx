@@ -35,7 +35,6 @@ const Control = ({ page, setPage, totalPages, image }) => {
             }}
           />
           </a>
-
         </Controls>
       </BottomSide>
     </Container>

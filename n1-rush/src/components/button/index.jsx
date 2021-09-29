@@ -2,7 +2,7 @@ import React from "react";
 import { PurchaseButton } from "./style";
 import Mario from "../../assets/svgs/mario.svg";
 
-const Button = ({ bagTotal, setOpen, setBagTotal }) => {
+const Button = ({ idProduct, products, pageProduct, bagTotal, setOpen, setBagTotal }) => {
   const [state, setState] = React.useState({
     label: "Comprar",
     disabled: false,
@@ -10,7 +10,7 @@ const Button = ({ bagTotal, setOpen, setBagTotal }) => {
 
   return (
     <PurchaseButton
-    disabled={state.disabled}  
+      disabled={state.disabled}
       state={state}
       onClick={() => {
         setState({
@@ -18,7 +18,7 @@ const Button = ({ bagTotal, setOpen, setBagTotal }) => {
           label: "Comprado!",
           labelMargin: "50px !important",
           showMario: "block",
-          disabled: true
+          disabled: true,
         });
         setOpen(true);
         setBagTotal(bagTotal + 1);
