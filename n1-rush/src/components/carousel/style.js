@@ -1,17 +1,18 @@
 import styled from "styled-components";
+import img from "../../assets/img/principal_banner_desktop.jpg";
 
 export const Container = styled.div`
+  //background-color: blue;
+`;
+
+export const Content = styled.div`
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -10;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  
 
   ::-webkit-scrollbar {
     width: 0;
@@ -23,13 +24,11 @@ export const Container = styled.div`
 
   ::-webkit-scrollbar-thumb {
     background: transparent;
-    border: none; 
+    border: none;
   }
 `;
 
 export const Slider = styled.div`
-  top: 0;
-  left: 0;
   scroll-snap-align: start;
   flex-shrink: 0;
   width: 100%;
@@ -39,19 +38,35 @@ export const Slider = styled.div`
   transition: transform 0.5s;
   position: relative;
   display: flex;
-
+  /* img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    margin: auto auto auto auto;
+  } */
+`;
+export const Image = styled.div`
+  max-width: 1920px;
+  width: 100%;
+  height: 840px;
+  background: url(${(props) => props.image}) no-repeat center center;
+  -webkit-background-size:cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:auto auto auto auto  
 `;
 
 export const Details = styled.div`
   max-width: 420px;
   color: #ffffff;
   text-align: right;
-  margin-left: 1080px;
+  margin-left: 55%;
   margin-top: 209px;
-
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 0px;
+
 
   h3 {
     font-weight: 900;

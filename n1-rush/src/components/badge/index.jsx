@@ -1,4 +1,4 @@
-import "../../global.css";
+
 import { Ellipse } from "./style";
 
 const Badge = ({quantity}) => {

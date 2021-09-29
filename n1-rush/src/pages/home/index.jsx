@@ -2,11 +2,11 @@ import Carousel from "../../components/carousel";
 import MediumBanners from "../../components/mediumBanners";
 import TopBar from "../../components/topBar";
 import HighlightIcon from "../../assets/svgs/highlight-icon.svg";
-import { Title, Products } from "./style";
+import { Title, Products, App } from "./style";
 import ProductList from "../../components/productList";
 import Footer from "../../components/footer";
 import React from "react";
-import "../../global.css"
+
 
 const Home = () => {
 
@@ -14,7 +14,7 @@ const Home = () => {
   
   return (
     
-    <body>
+    <App>
       <Carousel />
       <TopBar bagTotal={bagTotal}/>
       <MediumBanners />
@@ -26,7 +26,7 @@ const Home = () => {
         <ProductList setBagTotal={setBagTotal} bagTotal={bagTotal}/>
       </Products>     
       <Footer/> 
-    </body>
+    </App>
   );
 };
 

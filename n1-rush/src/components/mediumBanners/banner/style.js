@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+margin-left: 10px;
+margin-right: 10px;
   background-image: ${(props) => props.image};
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 627px;
-  min-height: 368px;
+  
+  width: 100%;
+  max-width: 627px;
+  min-width: 335px;
+
+  height: 368px;
   position: relative;
   display: flex;
   border-bottom-left-radius: 5px;
@@ -33,7 +39,8 @@ export const Label = styled.div`
   img {
     position: absolute;
     right: 26px;
-    width: 248px;
+    max-width: 248px;
+    width: 100%;
   }
 `;
 

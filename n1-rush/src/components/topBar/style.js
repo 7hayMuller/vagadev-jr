@@ -22,14 +22,29 @@ export const Container = styled.div`
     font-weight: 500;
     font-size: 14px;
   }
+
+  @media (max-width: 1240px){
+    padding: 0px 18px 0px 18px;
+  }
 `;
+
 export const LeftSide = styled.div`
   align-items: center;
   display: flex;
 
-  img:first-child {
+  img {
     margin-right: 43px;
   }
+
+  @media (max-width: 740px){
+    
+  }
+
+`;
+
+export const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const RightSide = styled.div`

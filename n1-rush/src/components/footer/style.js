@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  // position: absolute;
-  bottom: 0;
+  //position: absolute;
+  
+  margin: 171px auto auto auto;
   display: flex;
   max-width: 1920px;
   width: 100%;
   min-height: 50px;
-
-  margin-top: 1254px;
-
   background-color: #3ec6e0;
 `;
 
